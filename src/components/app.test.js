@@ -22,5 +22,21 @@ describe('App component', () => {
         expect(app.find('.gift-list').children().length).toEqual(1)
 
      })
+     it('checks the state of gift id greater then 1',() => {
+
+     })
    
 })
+
+it('render Gift', () => {
+    // .toBe(true)
+    expect(app.find('Gift').exists());
+})
+
+describe('delete gifts', () => {})
+it('delete the gift from the state',() => {
+  
+    app.instance().giftRemove(1);
+    expect(app.state().gifts).toEqual([{id:2}])
+})
+
